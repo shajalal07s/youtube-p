@@ -5,8 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industrial</title>
     <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
-    
+<body class="bg-color-primary text-color-white">
+    <!-- Heading -->
+    <header>
+        <nav class="container flex justify-between items-center">
+            <div class="text-color-secendery text-3xl py-5 font-bold">
+                <a href="#home">
+                    <span class="text-color-white">Light</span> Code
+                </a>
+            </div>
+            <div class="">
+                <ul class="hidden lg:flex items-center space-x-6">
+                    <li><a class="hover:text-color-secendery ease-in duration-200" href="#home">Home</a></li>
+                    <li><a class="hover:text-color-secendery ease-in duration-200" href="#home">Feauture</a></li>
+                    <li><a class="hover:text-color-secendery ease-in duration-200" href="#home">Terminal</a></li>
+                    <li><a class="hover:text-color-secendery ease-in duration-200" href="#home">Pricing</a></li>
+                    <li><a class="hover:text-color-secendery ease-in duration-200" href="#home">Blog</a></li>
+                    <li><a class="hover:text-color-secendery ease-in duration-200" href="#home">Contact</a></li>
+
+                    <li><button class="bg-color-secendery px-9 py-3 rounded-md 
+                    font-semibold ease-in duration-200 hover:opacity-80">Free Trial</button></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="menuber" class="lg:hidden cursor-pointer z-50">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div id="menu" class="hidden bg-color-primary h-[100vh] absolute inset-0">
+                <ul class="h-full grid place-items-center py-20 ">
+                    <li><a id="hlink" class="hover:text-color-secendery ease-in duration-200" href="#home">Home</a></li>
+                    <li><a id="hlink" class="hover:text-color-secendery ease-in duration-200" href="#home">Feauture</a></li>
+                    <li><a id="hlink" class="hover:text-color-secendery ease-in duration-200" href="#home">Terminal</a></li>
+                    <li><a id="hlink" class="hover:text-color-secendery ease-in duration-200" href="#home">Pricing</a></li>
+                    <li><a id="hlink" class="hover:text-color-secendery ease-in duration-200" href="#home">Blog</a></li>
+                    <li><a id="hlink" class="hover:text-color-secendery ease-in duration-200" href="#home">Contact</a></li>
+
+                    <li><button class="bg-color-secendery px-9 py-3 rounded-md 
+                        font-semibold ease-in duration-200 hover:opacity-80">Free Trial</button></li
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+
+
+    <script>
+        // Mobile User
+        const menuber = document.querySelector('#menuber');
+        const menu = document.querySelector('#menu');
+        const hlink = document.querySelector('#hlink');
+        const fasolid = document.querySelector('.fa-solid');
+
+        menuber.addEventListener("click", () =>{
+            menu.classList.toggle('hidden');
+            fasolid.classList.toggle('fa-xmark')
+        })
+    </script>
+
+
+
 </body>
 </html>
