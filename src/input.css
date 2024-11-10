@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+    @apply bg-color-secendery px-9 py-3 rounded-md 
+    font-semibold ease-in duration-200 hover:opacity-80;
+}
