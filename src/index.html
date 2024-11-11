@@ -10,11 +10,11 @@
 </head>
 <body class="bg-color-primary text-color-white">
     <!-- Heading -->
-    <header>
+    <header class="sticky top-0 z-50">
         <nav class="container flex justify-between items-center">
             <div class="text-color-secendery text-3xl py-5 font-bold">
                 <a href="#home">
-                    <span class="text-color-white">Light</span> Code
+                    <span class="text-color-white">Code</span> Miners
                 </a>
             </div>
             <div class="">
@@ -417,8 +417,8 @@
                             <input type="text" placeholder="Company" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block
                             w-full p-3 focus:outline-none focus:border-color-secendery ">
                         </div>
-                        
-                        <textarea rows="4" class="bg-gray-50 text-color-primary-dark border border-gray-300 text-sm rounded-lg block
+
+                        <textarea rows="4" placeholder="Masssage" class="bg-gray-50 text-color-primary-dark border border-gray-300 text-sm rounded-lg block
                             w-full p-3 focus:outline-none focus:border-color-secendery">
                         </textarea>
 
@@ -429,11 +429,95 @@
                 </form>
             </div>
         </section>
+
+        <!-- Footer Section -->
+
+        <footer id="footer" class="">
+            <div class="bg-color-primary-dark relative">
+                <div class="container py-10">
+                    <div class="grid gap-10 md:grid-cols-3 pb-10">
+                        <div class="space-y-6">
+                            <h4 class="font-bold text-lg">About App</h4>
+                            <p class="leading-relaxed">
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                 in a piece of classical Latin literature from 45 BC
+                            </p>
+                            <div class="flex items-center gap-5">
+                                <p>Follow Us</p>
+                                <i class="fa-brands fa-facebook cursor-pointer hover:text-color-secendery"></i>
+                                <i class="fa-brands fa-instagram cursor-pointer hover:text-color-secendery"></i>
+                                <i class="fa-brands fa-twitter cursor-pointer hover:text-color-secendery"></i>
+                                <i class="fa-brands fa-linkedin cursor-pointer hover:text-color-secendery"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between md:justify-around">
+                            <div class="space-y-6">
+                                <h4 class="text-lg font-bold">Quick Link</h4>
+                                <ul class="space-y-3">
+                                    <li class="underline hover:no-underline hover:text-color-secendery">Home</li>
+                                    <li class="underline hover:no-underline hover:text-color-secendery">Features</li>
+                                    <li class="underline hover:no-underline hover:text-color-secendery">Blog</li>
+                                    <li class="underline hover:no-underline hover:text-color-secendery">Testmoniya</li>
+                                    <li class="underline hover:no-underline hover:text-color-secendery">Contact</li>
+                                </ul>
+                            </div>
+
+                            <div class="space-y-6">
+                                <h4 class="text-lg font-bold">Help</h4>
+                                <ul class="space-y-3">
+                                    <li class="underline hover:no-underline hover:text-color-secendery">About Us</li>
+                                    <li class="underline hover:no-underline hover:text-color-secendery">Team and Condition</li>
+                                    <li class="underline hover:no-underline hover:text-color-secendery">Reviews</li>
+                                    <li class="underline hover:no-underline hover:text-color-secendery">Career</li>
+                                    <li class="underline hover:no-underline hover:text-color-secendery">Help</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <h4 class="font-bold text-lg">News Letter</h4>
+                            <p class="leading-relaxed">
+                                Subcribe With Email Leads Of News Will Be Sent To You
+                            </p>
+                            <div class="flex items-center">
+                                <input type="text" placeholder="Enter Your Email" class="w-3/4 bg-white p-2 lg:p-3 rounded-l-md 
+                                focus:outline-none">
+                                <button type="submit" class="bg-color-secendery px-4 py-2 lg:px-5 lg:py-3 rounded-r-md
+                                   hover:opacity-90 ">
+                                   <i class="fa-solid fa-chevron-right"></i>
+                               </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center pt-10 border-t border-color-gray">
+                        <p>2024 @copy; Code Miner .All Right Reserve</p>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 
 
     
     <script>
+        // Header
+
+        const navbar = document.querySelector('header');
+
+        window.onscroll = () => {
+            if(window.scrollY > 100) {
+                navbar.classList.add('bg-color-primary-dark');
+                navbar.classList.add('border-b');
+                navbar.classList.add('border-color-gray');
+            } else {
+                navbar.classList.remove('bg-color-primary-dark');
+                navbar.classList.remove('border-b');
+                navbar.classList.remove('border-color-gray');
+            }
+        }
+       
+
         // Mobile User
         const menuber = document.querySelector('#menuber');
         const menu = document.querySelector('#menu');
